@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Bilal Yousaf — Curriculum Vitae / Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1e293b;
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 60px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    header {
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 20px;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #475569;
+    }
+    .contact-grid a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-grid a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .summary-text {
+      font-size: 13.5px;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .experience-item, .project-item {
+      margin-bottom: 16px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .item-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .item-date {
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748b;
+    }
+    ul.bullet-list {
+      list-style-type: square;
+      padding-left: 20px;
+      margin-top: 6px;
+      font-size: 13px;
+      color: #334155;
+    }
+    ul.bullet-list li {
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .skill-card {
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+    .skill-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .skill-desc {
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.4;
+    }
+    .print-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+    }
+    .btn {
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: #0284c7;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #0369a1;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    .btn-secondary:hover {
+      background: #cbd5e1;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .print-actions {
+        display: none;
+      }
+    }
+    @media (max-width: 640px) {
+      .resume-container {
+        padding: 30px 20px;
+      }
+      .contact-grid, .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Actions Bar -->
+  <div class="print-actions">
+    <button class="btn btn-primary" onclick="window.print()">
+      🖨️ Print / Save as PDF
+    </button>
+    <a href="../index.html" class="btn btn-secondary">
+      ← Back to Portfolio
+    </a>
+  </div>
+
+  <div class="resume-container">
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>Muhammad Bilal Yousaf</h1>
+          <div class="subtitle">Undergraduate Cybersecurity Student • AI &amp; Software Solutions Architect</div>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div><strong>Email:</strong> <a href="mailto:srbilal12@gmail.com">srbilal12@gmail.com</a></div>
+        <div><strong>Phone:</strong> +92 3421080908</div>
+        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank">in/muhammad-bilal-yousaf-a2a93140b</a></div>
+        <div><strong>GitHub:</strong> <a href="https://github.com/srbilal12-cyber" target="_blank">github.com/srbilal12-cyber</a></div>
+        <div><strong>Location:</strong> Hajira, Azad Kashmir</div>
+        <div><strong>University:</strong> Capital University of Science &amp; Technology (cust.pk) — BS Cybersecurity (In Progress)</div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2>Executive Profile</h2>
+      <p class="summary-text">
+        Undergraduate Cybersecurity student currently enrolled at Capital University of Science and Technology (CUST), specializing in applied artificial intelligence, clinical computer vision diagnostics, threat defense infrastructures, and enterprise Microsoft Office analytics. Architect and lead developer of <strong>HemoScan</strong>, an optical AI platform performing non-invasive hemoglobin estimation via smartphone camera optics. Proven ability to bridge low-level systems engineering with modern reactive web applications and data modeling workflows.
+      </p>
+    </section>
+
+    <!-- Key Projects -->
+    <section>
+      <h2>Flagship &amp; Core Projects</h2>
+      
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">HemoScan — AI Non-Invasive Hemoglobin Screening</span>
+            <span class="item-subtitle"> | Lead Architect &amp; Developer</span>
+          </div>
+          <span class="item-date">2025 – Present</span>
+        </div>
+        <p class="summary-text" style="font-size: 13px; margin-bottom: 4px;">
+          Live Production URL: <a href="https://hemo-scan--srbilal12.replit.app/" target="_blank" style="color: #0284c7;">https://hemo-scan--srbilal12.replit.app/</a>
+        </p>
+        <ul class="bullet-list">
+          <li>Architected an AI-driven Progressive Web App replacing invasive venipunctures with smartphone photoplethysmography (PPG).</li>
+          <li>Engineered multi-channel RGB spectral absorption decomposition to isolate oxygenated vs. deoxygenated blood pulse waves.</li>
+          <li>Trained neural regression models to estimate hemoglobin levels (g/dL) and categorize clinical anemia risk tiers.</li>
+          <li>Integrated Leaflet GIS mapping to automatically route at-risk users to proximal registered health clinics.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">CyberShield Threat Telemetry &amp; Protocol Hardener</span>
+            <span class="item-subtitle"> | Cybersecurity Systems</span>
+          </div>
+          <span class="item-date">2025 – 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed defensive packet inspection and threat anomaly telemetry scripts monitoring network boundary vulnerabilities.</li>
+          <li>Implemented cryptographic handshake validation and automated port auditing algorithms across Linux/Unix environments.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Enterprise Analytics &amp; MS Office Automation Suite</span>
+            <span class="item-subtitle"> | Business Intelligence</span>
+          </div>
+          <span class="item-date">2024 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Engineered automated data cleansing and multi-criteria modeling workflows in Microsoft Excel using advanced formulas (XLOOKUP, INDEX/MATCH) and dynamic Pivot Tables.</li>
+          <li>Structured executive research documentation in Microsoft Word and dynamic briefing decks in PowerPoint and Power BI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Proficiencies -->
+    <section>
+      <h2>Technical Proficiencies</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-title">Cybersecurity &amp; System Hardening</div>
+          <div class="skill-desc">Network Traffic Telemetry, Vulnerability Auditing, Cryptography (AES, RSA, PKI), Protocol Hardening, Endpoint Security, Linux.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">Artificial Intelligence &amp; Computer Vision</div>
+          <div class="skill-desc">Optical PPG, Spectral Absorption Analysis, Python, TensorFlow, Scikit-Learn, Predictive Regression, Signal Filtering.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">Microsoft Office &amp; Analytics Suite</div>
+          <div class="skill-desc">Advanced Excel (Formulas, Pivot Tables, Data Models), Word (Technical Docs), PowerPoint (Pitch Decks), Microsoft 365, Power BI.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-title">Software Engineering &amp; Web Systems</div>
+          <div class="skill-desc">React.js, Three.js WebGL, Tailwind CSS, Progressive Web Apps (PWAs), Git/GitHub CI/CD, REST APIs, Replit Deployment.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education &amp; Credentials</h2>
+      <div class="item-header">
+        <div>
+          <span class="item-title">Capital University of Science and Technology (CUST)</span>
+          <div class="item-subtitle">Bachelor of Science in Cybersecurity (In Progress / Undergraduate Student)</div>
+        </div>
+        <span class="item-date">cust.pk • Islamabad (Expected 2026)</span>
+      </div>
+      <p class="summary-text" style="margin-top: 6px; font-size: 13px;">
+        Currently pursuing BS in Cybersecurity with focus on defensive systems engineering, vulnerability auditing, applied AI diagnostic modeling (HemoScan), and enterprise data architectures.
+      </p>
+    </section>
+  </div>
+
+</body>
+</html>

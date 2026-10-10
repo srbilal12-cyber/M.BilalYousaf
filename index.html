@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Bilal Yousaf | BS Cybersecurity Student & Software Developer</title>
+  <meta name="description" content="Personal portfolio of Muhammad Bilal Yousaf, undergraduate Cybersecurity student at Capital University of Science and Technology (CUST). Creator of HemoScan (AI optical hemoglobin estimation prototype)." />
+  <meta name="keywords" content="Muhammad Bilal Yousaf, Cybersecurity Student, CUST, HemoScan, Network Defense, SOC Analyst, srbilal12-cyber" />
+  <meta name="author" content="Muhammad Bilal Yousaf" />
+  <link rel="canonical" href="https://srbilal12-cyber.github.io/" />
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhammad Bilal Yousaf | BS Cybersecurity Student (CUST)" />
+  <meta property="og:description" content="Undergraduate Cybersecurity student at Capital University of Science and Technology (CUST). Developer of HemoScan." />
+  <meta property="og:image" content="./assets/bilal_headshot.jpg" />
+  <meta property="og:url" content="https://srbilal12-cyber.github.io/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Muhammad Bilal Yousaf | BS Cybersecurity Student (CUST)" />
+  <meta name="twitter:description" content="Undergraduate Cybersecurity student at CUST. Developer of HemoScan." />
+  <meta name="twitter:image" content="./assets/bilal_headshot.jpg" />
+
+  <!-- Schema.org Person Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Bilal Yousaf",
+    "jobTitle": "BS Cybersecurity Student",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Capital University of Science and Technology (CUST)"
+    },
+    "url": "https://srbilal12-cyber.github.io/",
+    "sameAs": [
+      "https://github.com/srbilal12-cyber",
+      "https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b"
+    ],
+    "email": "srbilal12@gmail.com"
+  }
+  </script>
+
+  <!-- Typography: Sora (Headings), Inter (Body), JetBrains Mono (Labels/Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            navy: {
+              900: '#0f172a',
+              950: '#090d16',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            heading: ['Sora', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          maxWidth: {
+            content: '1120px',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --color-bg: #f8fafc;
+      --color-text: #0f172a;
+    }
+    .dark {
+      --color-bg: #090d16;
+      --color-text: #f1f5f9;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Sora', system-ui, sans-serif;
+      letter-spacing: -0.025em;
+    }
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    :focus-visible {
+      outline: 2px solid #10b981;
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto !important;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 9999px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-slate-100 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-200">
+
+  <!-- Skip to Main Content Link for Keyboard & Screen Reader Accessibility -->
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-emerald-600 focus:text-white focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono text-sm"
+  >
+    Skip to main content
+  </a>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header id="site-header" class="sticky top-0 z-40 w-full transition-all duration-200 bg-slate-900/95 dark:bg-[#090d16]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="group inline-flex items-center gap-2 font-heading font-semibold text-base sm:text-lg text-slate-900 dark:text-slate-100 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-md py-1 transition-colors">
+        <span class="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-mono text-sm font-bold">
+          BY
+        </span>
+        <span class="tracking-tight">Muhammad Bilal Yousaf</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="hidden md:flex items-center gap-6">
+        <a href="#about" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded py-1 transition-colors">About</a>
+        <a href="#hemoscan" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded py-1 transition-colors">HemoScan</a>
+        <a href="#skills" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded py-1 transition-colors">Skills</a>
+        <a href="#practice" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded py-1 transition-colors">Practice</a>
+        <a href="#contact" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded py-1 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons (Resume & Theme Toggle) -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="./assets/Muhammad_Bilal_Yousaf_Resume.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 focus-visible:ring-2 focus-visible:ring-emerald-500 transition-colors">
+          <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>
+          <span>Resume</span>
+          <svg class="w-3 h-3 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+
+        <button id="theme-toggle-btn" type="button" aria-label="Toggle dark and light mode" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/60 focus-visible:ring-2 focus-visible:ring-emerald-500 transition-colors">
+          <span id="theme-icon-container">
+            <svg class="w-4 h-4 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex md:hidden items-center gap-2">
+        <button id="theme-toggle-btn-mobile" type="button" aria-label="Toggle theme" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-emerald-500">
+          <svg class="w-4 h-4 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-emerald-500">
+          <svg id="mobile-menu-icon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-white/95 dark:bg-[#090d16]/95 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <nav aria-label="Mobile Navigation" class="flex flex-col space-y-2">
+        <a href="#about" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="#hemoscan" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">HemoScan</a>
+        <a href="#skills" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Skills</a>
+        <a href="#practice" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Practice</a>
+        <a href="#contact" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
+      </nav>
+      <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+        <a href="./assets/Muhammad_Bilal_Yousaf_Resume.html" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition-colors">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>
+          <span>View Resume</span>
+          <svg class="w-3.5 h-3.5 opacity-80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content" tabindex="-1" class="focus:outline-none">
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 lg:gap-14">
+          
+          <!-- Content Column -->
+          <div class="flex-1 text-center md:text-left space-y-6 max-w-2xl">
+            <!-- Availability Pill -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 shadow-sm">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span>Available for Cybersecurity Internships & Junior SOC Roles</span>
+            </div>
+
+            <!-- Name & Headings -->
+            <div class="space-y-3">
+              <h1 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-slate-50 tracking-tight leading-tight">
+                Muhammad Bilal Yousaf
+              </h1>
+              <p class="font-heading font-medium text-lg sm:text-xl text-emerald-700 dark:text-emerald-400">
+                BS Cybersecurity Student & Software Developer
+              </p>
+              <p class="text-sm font-mono text-slate-500 dark:text-slate-400">
+                Capital University of Science and Technology (CUST) • Expected 2026
+              </p>
+            </div>
+
+            <!-- Short Intro -->
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+              I study cybersecurity at Capital University of Science and Technology (CUST) with an emphasis on defensive security, network fundamentals, and applied software development. Currently seeking an internship or junior SOC analyst opportunity to apply hands-on problem solving to real-world security challenges.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-3.5 pt-2">
+              <a href="./assets/Muhammad_Bilal_Yousaf_Resume.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm hover:shadow transition-all focus-visible:ring-2 focus-visible:ring-emerald-500">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>
+                <span>View Resume</span>
+                <svg class="w-3.5 h-3.5 opacity-80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+
+              <a href="#hemoscan" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700/80 text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 transition-all focus-visible:ring-2 focus-visible:ring-emerald-500">
+                <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                <span>Featured Project (HemoScan)</span>
+                <svg class="w-3.5 h-3.5 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+              </a>
+
+              <a href="#contact" class="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded">
+                <span>Contact me &rarr;</span>
+              </a>
+            </div>
+
+            <!-- Profile Links -->
+            <div class="flex items-center justify-center md:justify-start gap-4 pt-3 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800/60">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500">Connect:</span>
+              <a href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" aria-label="GitHub Profile">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <span>srbilal12-cyber</span>
+              </a>
+              <span class="text-slate-300 dark:text-slate-700">•</span>
+              <a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" aria-label="LinkedIn Profile">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <span class="text-slate-300 dark:text-slate-700">•</span>
+              <a href="mailto:srbilal12@gmail.com" class="inline-flex items-center gap-1.5 text-xs hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" aria-label="Email Muhammad Bilal Yousaf">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Headshot Column -->
+          <div class="flex-shrink-0">
+            <div class="relative group">
+              <div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-emerald-500/20 via-teal-500/10 to-blue-500/20 blur-sm pointer-events-none"></div>
+              <div class="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-md">
+                <img src="./assets/bilal_headshot.jpg" alt="Muhammad Bilal Yousaf - BS Cybersecurity student at CUST" class="w-full h-full object-cover object-center" width="224" height="224" />
+              </div>
+              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm text-[11px] font-mono font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap">
+                CUST Student
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
+      <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="space-y-2 mb-10">
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>Background & Education</span>
+          </div>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 dark:text-slate-50 tracking-tight">
+            About Me
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-2xl">
+            My academic foundation, coursework, and technical interests as an undergraduate cybersecurity student.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Bio -->
+          <div class="lg:col-span-7 space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+            <p>
+              I am an undergraduate student pursuing a <strong class="font-semibold text-slate-900 dark:text-white">Bachelor of Science in Cybersecurity</strong> at Capital University of Science and Technology (CUST). My academic focus centers on understanding core operating system architectures, network protocols, defensive controls, and foundational cryptography.
+            </p>
+            <p>
+              Alongside formal cybersecurity coursework, I develop applied software utilities and prototypes in Python, React, and Linux environments. I enjoy building practical tools—such as network traffic sniffers, port scanners, and computer vision experimental models—to ground theoretical concepts in hands-on code.
+            </p>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+              I am actively preparing for entry-level security analyst roles (SOC Tier 1 / Incident Response) and security engineering internships where I can contribute to daily defensive operations, learn from senior practitioners, and continue expanding my practical skill set.
+            </p>
+          </div>
+
+          <!-- Education Card -->
+          <div class="lg:col-span-5 bg-white dark:bg-slate-900/90 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+            <div class="flex items-start gap-3.5 pb-4 border-b border-slate-100 dark:border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </div>
+              <div class="space-y-0.5">
+                <h3 class="font-heading font-semibold text-base text-slate-900 dark:text-white">
+                  Capital University of Science and Technology (CUST)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                  Islamabad, Pakistan
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between items-baseline py-1 border-b border-slate-50 dark:border-slate-800/40">
+                <span class="text-slate-500 dark:text-slate-400 text-xs font-mono uppercase">Degree</span>
+                <span class="font-medium text-slate-900 dark:text-slate-200 text-right">Bachelor of Science in Cybersecurity</span>
+              </div>
+              <div class="flex justify-between items-baseline py-1 border-b border-slate-50 dark:border-slate-800/40">
+                <span class="text-slate-500 dark:text-slate-400 text-xs font-mono uppercase">Status</span>
+                <span class="inline-flex items-center gap-1 font-medium text-emerald-700 dark:text-emerald-400 text-xs">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  Currently Enrolled (Undergraduate)
+                </span>
+              </div>
+              <div class="flex justify-between items-baseline py-1">
+                <span class="text-slate-500 dark:text-slate-400 text-xs font-mono uppercase">Graduation</span>
+                <span class="font-mono text-xs text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-0.5 rounded border border-emerald-200 dark:border-emerald-800/40 font-semibold">
+                  Expected 2026
+                </span>
+              </div>
+            </div>
+
+            <!-- Coursework -->
+            <div class="pt-2">
+              <div class="flex items-center gap-1.5 text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2.5">
+                <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span>Relevant Academic Coursework</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Network Security</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Operating Systems</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Data Structures & Algorithms</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Computer Networks</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Cryptography Fundamentals</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Object-Oriented Programming</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Database Systems</span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-mono bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">Information Assurance & Defense</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HEMOSCAN CASE STUDY SECTION -->
+    <section id="hemoscan" class="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
+      <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="space-y-2 mb-8">
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <span>Featured Case Study</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 dark:text-slate-50 tracking-tight">
+                HemoScan
+              </h2>
+              <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-1">
+                AI-Assisted Non-Invasive Hemoglobin Estimation Prototype
+              </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <a href="https://hemo-scan--srbilal12.replit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500">
+                <span>Live Prototype</span>
+                <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+              <a href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <span>Code Repository</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="flex flex-wrap items-center gap-2 mb-8">
+          <span class="text-xs font-mono uppercase text-slate-400 dark:text-slate-500 mr-1">Stack:</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80">Python</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80">Computer Vision</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80">Photoplethysmography (PPG)</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80">React</span>
+          <span class="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80">Replit</span>
+        </div>
+
+        <!-- MANDATORY MEDICAL DISCLAIMER -->
+        <div role="note" aria-label="Medical research disclaimer" class="mb-10 rounded-xl p-4 sm:p-5 bg-amber-500/10 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm leading-relaxed">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div class="space-y-1">
+              <strong class="font-heading font-semibold text-amber-800 dark:text-amber-300 block">
+                Research Prototype — Not a Medical Device
+              </strong>
+              <p class="text-amber-700 dark:text-amber-300/90">
+                Research prototype, not a medical device. This software is developed solely for academic exploration and optical signal experimentation. It is not approved by regulatory bodies and must never be used as a substitute for professional clinical medical advice, certified laboratory blood testing, or clinical diagnosis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 5-Point Case Study Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-heading font-semibold text-base">
+              <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <h3>1. The Problem</h3>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Traditional hemoglobin testing requires an invasive blood draw via needles, trained phlebotomists, sterile consumables, and physical visits to clinical pathology laboratories. For patients requiring frequent hemoglobin monitoring, as well as populations in rural or low-resource settings, this creates substantial barriers in cost, accessibility, and physical discomfort.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-heading font-semibold text-base">
+              <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0l8.57-3.9a1 1 0 0 0 0-1.83Z"/><path d="m2 12 10 4 10-4"/><path d="m2 17 10 4 10-4"/></svg>
+              <h3>2. Engineering Approach</h3>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Explored whether smartphone camera sensors can capture microvascular color variations in fingertip capillary beds using photoplethysmography (PPG). When illuminated by the camera LED flash, blood volume oscillations alter light absorption across red, green, and blue optical channels. The prototype extracts RGB intensity ratios, normalizes baseline signal noise, and applies regression modeling to estimate hemoglobin concentration ranges.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-heading font-semibold text-base">
+              <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              <h3>3. Current Prototype Results</h3>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Built a functional web application prototype deployed on Replit that processes live camera feeds or frame captures, isolates the region of interest, computes colorimetric intensity shifts, and presents estimated hemoglobin figures alongside standard reference categories.
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-heading font-semibold text-base">
+              <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <h3>4. Known Limitations & Edge Cases</h3>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              The system remains a research prototype with significant constraints: high sensitivity to ambient light inconsistency, hardware variability across different smartphone camera sensors (auto-exposure and white-balance adjustments), skin tone variations, inconsistent finger contact pressure, and a lack of clinical trial validation against gold-standard laboratory hematology analyzers.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Key Learnings -->
+        <div class="mt-6 bg-slate-50 dark:bg-slate-900/60 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <div class="flex items-center gap-2 text-emerald-700 dark:text-emerald-300 font-heading font-semibold text-base">
+            <svg class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            <h3>5. Key Learnings & Engineering Takeaways</h3>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Learned practical computer vision preprocessing, digital signal filtering, techniques for isolating optical noise from biological signals, and the critical ethical responsibility of communicating system limitations through explicit disclaimers in biomedical applications.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
+      <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="space-y-2 mb-10">
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 dark:text-slate-50 tracking-tight">
+            Skills & Tooling
+          </h2>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+            <svg class="w-4 h-4 flex-shrink-0 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>Academic and practical competencies developed through university coursework and hands-on development.</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Proficient -->
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
+                <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <h3 class="font-heading font-semibold text-base text-slate-900 dark:text-slate-100">Proficient</h3>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Technologies and tools used regularly in coursework and projects:</p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60">Python</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60">Linux Basics</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60">Networking (TCP/IP, DNS, Subnetting)</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60">Git & GitHub</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60">Microsoft Excel (Data Modeling)</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60">Microsoft Word & PowerPoint</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/40 text-[11px] font-mono text-slate-400">6 competencies listed</div>
+          </div>
+
+          <!-- Familiar -->
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
+                <svg class="w-4 h-4 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <h3 class="font-heading font-semibold text-base text-slate-900 dark:text-slate-100">Familiar</h3>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Concepts and tools practiced in university labs and software prototypes:</p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60">C++</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60">React.js</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60">Tailwind CSS</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60">Wireshark Packet Analysis</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60">Cryptography Basics</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800/60">Web Security (OWASP Top 10)</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/40 text-[11px] font-mono text-slate-400">6 competencies listed</div>
+          </div>
+
+          <!-- Currently Learning -->
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
+                <svg class="w-4 h-4 text-amber-600 dark:text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                <h3 class="font-heading font-semibold text-base text-slate-900 dark:text-slate-100">Currently Learning</h3>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Topics actively studying through ongoing coursework and independent labs:</p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-800/60">SOC Operations</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-800/60">SIEM Tooling (Splunk / Elastic)</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-800/60">Binary Exploitation Basics</span>
+                <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-800/60">Cloud Security Fundamentals</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/40 text-[11px] font-mono text-slate-400">4 competencies listed</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRACTICE & CERTIFICATIONS SECTION -->
+    <section id="practice" class="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
+      <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="space-y-2 mb-10">
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.2 0l-3.58 2.687a.5.5 0 0 1-.81-.47l1.515-8.526"/></svg>
+            <span>Practical Experience & Goals</span>
+          </div>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 dark:text-slate-50 tracking-tight">
+            Labs, CTFs & Certifications
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-2xl">
+            Ongoing practical labs, hands-on environments, and certification preparation:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- TryHackMe -->
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
+                  <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  Active Learner
+                </span>
+                <svg class="w-4 h-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              </div>
+              <h3 class="font-heading font-semibold text-base sm:text-lg text-slate-900 dark:text-slate-100">TryHackMe / Hands-on Labs</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Regularly practicing hands-on security rooms covering Linux fundamentals, network reconnaissance, and web application security.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/60">
+              <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400 hover:underline">
+                <span>TryHackMe Profile</span>
+                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Academic Labs -->
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60">
+                  <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                  Coursework
+                </span>
+                <svg class="w-4 h-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              </div>
+              <h3 class="font-heading font-semibold text-base sm:text-lg text-slate-900 dark:text-slate-100">CUST Academic Security Labs</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Completed university practical labs in packet capture inspection, cryptographic cipher implementation, and basic defensive system hardening.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/60">
+              <a href="https://cust.pk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400 hover:underline">
+                <span>CUST University Portal</span>
+                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60">
+                  <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  In Preparation
+                </span>
+                <svg class="w-4 h-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              </div>
+              <h3 class="font-heading font-semibold text-base sm:text-lg text-slate-900 dark:text-slate-100">CompTIA Security+ & eJPT</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Actively studying core security concepts, network defense architectures, and hands-on penetration testing methodologies for upcoming certifications.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/60">
+              <a href="https://www.comptia.org/certifications/security" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400 hover:underline">
+                <span>CompTIA Security+ Details</span>
+                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 scroll-mt-16">
+      <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="space-y-2 mb-10">
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Get in Touch</span>
+          </div>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl text-slate-900 dark:text-slate-50 tracking-tight">
+            Contact & Inquiries
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-2xl">
+            Interested in discussing cybersecurity internships, junior analyst opportunities, or technical collaboration? Reach out directly.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Direct Channels -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+              <h3 class="font-heading font-semibold text-lg text-slate-900 dark:text-white">Direct Channels</h3>
+              
+              <div class="space-y-4">
+                <a href="mailto:srbilal12@gmail.com" class="flex items-start gap-3.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group focus-visible:ring-2 focus-visible:ring-emerald-500">
+                  <div class="w-9 h-9 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 block">Email</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors break-all">srbilal12@gmail.com</span>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group focus-visible:ring-2 focus-visible:ring-emerald-500">
+                  <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 block">LinkedIn</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">muhammad-bilal-yousaf-a2a93140b</span>
+                  </div>
+                </a>
+
+                <a href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group focus-visible:ring-2 focus-visible:ring-emerald-500">
+                  <div class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-300 flex-shrink-0">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 block">GitHub</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">srbilal12-cyber</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="pt-3 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Availability: </span>
+                Available for Cybersecurity Internships & Junior SOC Roles
+              </div>
+            </div>
+          </div>
+
+          <!-- Working Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <h3 class="font-heading font-semibold text-lg text-slate-900 dark:text-white mb-2">Send a Message</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
+                Fill out the form below or email directly. Messages are routed straight to my primary inbox.
+              </p>
+
+              <!-- Success Alert (Hidden by default) -->
+              <div id="contact-success" class="hidden mb-6 p-4 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 flex items-start gap-3 text-emerald-900 dark:text-emerald-200 text-sm">
+                <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <div>
+                  <strong class="font-semibold block">Thank you! Message received.</strong>
+                  <span>I will get back to you as soon as possible.</span>
+                </div>
+              </div>
+
+              <!-- Error Alert (Hidden by default) -->
+              <div id="contact-error" class="hidden mb-6 p-4 rounded-lg bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 flex items-start gap-3 text-rose-900 dark:text-rose-200 text-sm">
+                <svg class="w-5 h-5 text-rose-600 dark:text-rose-400 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div class="space-y-1">
+                  <strong id="contact-error-msg" class="font-semibold block">Unable to send message via form.</strong>
+                  <span>You can also email me directly at <a href="mailto:srbilal12@gmail.com" class="underline font-mono font-medium">srbilal12@gmail.com</a>.</span>
+                </div>
+              </div>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+                      Your Name <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="contact-name" name="name" required placeholder="Jane Doe" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
+                  </div>
+
+                  <div>
+                    <label for="contact-email" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+                      Email Address <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="email" id="contact-email" name="email" required placeholder="recruiter@example.com" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-subject" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+                    Subject
+                  </label>
+                  <input type="text" id="contact-subject" name="subject" placeholder="Cybersecurity Internship Opportunity" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+                    Message <span class="text-rose-500">*</span>
+                  </label>
+                  <textarea id="contact-message" name="message" required rows="4" placeholder="Hello Bilal, we reviewed your profile and HemoScan case study..." class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors resize-y"></textarea>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between">
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Direct email & inquiries only.</p>
+                  <button id="contact-submit-btn" type="submit" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm disabled:opacity-60 disabled:cursor-not-allowed transition-all focus-visible:ring-2 focus-visible:ring-emerald-500">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <span id="contact-submit-text">Send Message</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 bg-slate-50 dark:bg-slate-950/70 border-t border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
+    <div class="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        
+        <div class="text-center sm:text-left space-y-1">
+          <p class="font-heading font-semibold text-slate-900 dark:text-slate-200">Muhammad Bilal Yousaf</p>
+          <p class="font-mono text-xs text-slate-500 dark:text-slate-400">BS Cybersecurity Undergraduate • CUST Islamabad</p>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <a href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="GitHub Profile">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="LinkedIn Profile">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:srbilal12@gmail.com" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="Email Me">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+
+          <span class="w-px h-5 bg-slate-300 dark:bg-slate-700" aria-hidden="true"></span>
+
+          <button id="back-to-top-btn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-mono font-medium text-slate-700 dark:text-slate-300 shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500">
+            <span>Top</span>
+            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-200/60 dark:border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-slate-400 dark:text-slate-500">
+        <p>&copy; 2026 Muhammad Bilal Yousaf. All rights reserved.</p>
+        <p>Designed with WCAG AA compliance &bull; Clean modern typography</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== ROBUST INTERACTIVE JAVASCRIPT ==================== -->
+  <script>
+    (function() {
+      // 1. Theme State Initialization
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const themeToggleBtnMobile = document.getElementById('theme-toggle-btn-mobile');
+      const themeIconContainer = document.getElementById('theme-icon-container');
+
+      function getSavedTheme() {
+        try {
+          const stored = localStorage.getItem('bilal_portfolio_theme');
+          if (stored) return stored;
+        } catch(e) {}
+        return 'dark'; // Dark theme default
+      }
+
+      function updateThemeIcons(theme) {
+        const sunSvg = '<svg class="w-4 h-4 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
+        const moonSvg = '<svg class="w-4 h-4 text-slate-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+        if (themeIconContainer) {
+          themeIconContainer.innerHTML = theme === 'dark' ? sunSvg : moonSvg;
+        }
+        if (themeToggleBtnMobile) {
+          themeToggleBtnMobile.innerHTML = theme === 'dark' ? sunSvg : moonSvg;
+        }
+      }
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          htmlEl.classList.add('dark');
+          htmlEl.classList.remove('light');
+        } else {
+          htmlEl.classList.add('light');
+          htmlEl.classList.remove('dark');
+        }
+        try {
+          localStorage.setItem('bilal_portfolio_theme', theme);
+        } catch(e) {}
+        updateThemeIcons(theme);
+      }
+
+      // Initial Theme setup
+      setTheme(getSavedTheme());
+
+      function handleThemeToggle() {
+        const currentTheme = htmlEl.classList.contains('dark') ? 'dark' : 'light';
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(nextTheme);
+      }
+
+      if (themeToggleBtn) themeToggleBtn.addEventListener('click', handleThemeToggle);
+      if (themeToggleBtnMobile) themeToggleBtnMobile.addEventListener('click', handleThemeToggle);
+
+      // 2. Mobile Menu Drawer
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const mobileIcon = document.getElementById('mobile-menu-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function toggleMobileMenu() {
+        const isOpen = !mobileDrawer.classList.contains('hidden');
+        if (isOpen) {
+          mobileDrawer.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          mobileIcon.innerHTML = '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>';
+        } else {
+          mobileDrawer.classList.remove('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'true');
+          mobileIcon.innerHTML = '<path d="M18 6 6 18M6 6l12 12"/>';
+        }
+      }
+
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', toggleMobileMenu);
+        mobileLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            mobileDrawer.classList.add('hidden');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileIcon.innerHTML = '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>';
+          });
+        });
+      }
+
+      // 3. Back to Top Button
+      const backToTopBtn = document.getElementById('back-to-top-btn');
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 4. Contact Form AJAX Submission (Formspree)
+      const contactForm = document.getElementById('contact-form');
+      const successBox = document.getElementById('contact-success');
+      const errorBox = document.getElementById('contact-error');
+      const errorMsg = document.getElementById('contact-error-msg');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const submitText = document.getElementById('contact-submit-text');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+
+          if (successBox) successBox.classList.add('hidden');
+          if (errorBox) errorBox.classList.add('hidden');
+
+          const nameVal = document.getElementById('contact-name').value.trim();
+          const emailVal = document.getElementById('contact-email').value.trim();
+          const subjectVal = document.getElementById('contact-subject').value.trim();
+          const messageVal = document.getElementById('contact-message').value.trim();
+
+          if (!nameVal || !emailVal || !messageVal) {
+            if (errorMsg) errorMsg.textContent = 'Please fill in all required fields (Name, Email, Message).';
+            if (errorBox) errorBox.classList.remove('hidden');
+            return;
+          }
+
+          if (submitBtn) submitBtn.disabled = true;
+          if (submitText) submitText.textContent = 'Sending...';
+
+          try {
+            const resp = await fetch('https://formspree.io/f/xbjnqzkr', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                name: nameVal,
+                email: emailVal,
+                subject: subjectVal || 'Portfolio Inquiry',
+                message: messageVal
+              })
+            });
+
+            if (resp.ok) {
+              if (successBox) successBox.classList.remove('hidden');
+              contactForm.reset();
+            } else {
+              const data = await resp.json().catch(function() { return {}; });
+              throw new Error(data.error || 'Submission failed. Please email directly.');
+            }
+          } catch(err) {
+            if (errorMsg) errorMsg.textContent = err.message || 'Unable to send message via form.';
+            if (errorBox) errorBox.classList.remove('hidden');
+          } finally {
+            if (submitBtn) submitBtn.disabled = false;
+            if (submitText) submitText.textContent = 'Send Message';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
