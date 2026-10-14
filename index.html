@@ -296,11 +296,27 @@
       main section .max-w-\\[1120px\\] { padding-left: 1.5rem; padding-right: 1.5rem; }
     }
 
+    /* Keep hero text fully inside narrow phone screens */
+    @media (max-width: 767px) {
+      #hero, #hero * { min-width: 0; box-sizing: border-box; }
+      #hero .max-w-\\[1120px\\] { width: 100%; max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
+      #hero .flex-col-reverse { width: 100%; align-items: stretch; gap: 1.5rem; }
+      #hero .flex-col-reverse > div:first-child { width: 100%; max-width: 100%; text-align: center; }
+      #hero h1 { width: 100%; max-width: 100%; font-size: clamp(1.65rem, 7.5vw, 2.5rem); line-height: 1.15; letter-spacing: -.035em; overflow-wrap: anywhere; word-break: normal; }
+      #hero .space-y-3 > p { max-width: 100%; overflow-wrap: anywhere; }
+      #hero .inline-flex.rounded-full { display: flex; width: fit-content; max-width: 100%; margin-inline: auto; white-space: normal; overflow-wrap: anywhere; line-height: 1.45; text-align: left; }
+      #hero .inline-flex.rounded-full span:last-child { min-width: 0; overflow-wrap: anywhere; }
+      #hero p.text-base { width: 100%; max-width: 100%; font-size: 1rem; line-height: 1.65; overflow-wrap: anywhere; }
+      #hero .flex-wrap { width: 100%; }
+      #hero .flex-wrap a { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+    }
     @media (max-width: 380px) {
       #site-header > div:first-child { padding-left: .65rem; padding-right: .65rem; }
       #site-header > div:first-child > a:first-child > span:last-child { max-width: 42vw; font-size: .72rem; }
       #hero .flex-col-reverse { gap: 1.5rem; }
       #hero .inline-flex.rounded-full { font-size: .65rem; }
+      #hero h1 { font-size: clamp(1.55rem, 7.2vw, 1.8rem); }
+      #hero p.text-base { font-size: .95rem; }
     }
 
   </style>
