@@ -175,6 +175,46 @@
       #contact form button { min-height: 44px; }
       footer { overflow-wrap: anywhere; }
     }
+    /* Extra mobile-first usability improvements */
+    :root { color-scheme: light; }
+    .dark { color-scheme: dark; }
+    button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+    a { touch-action: manipulation; }
+    @media (max-width: 767px) {
+      html { scroll-padding-top: 4.5rem; }
+      #site-header { padding-top: env(safe-area-inset-top); }
+      #site-header > div:first-child { min-height: 3.75rem; }
+      #mobile-drawer { max-height: calc(100dvh - 4rem); overflow-y: auto; overscroll-behavior: contain; }
+      #mobile-drawer .mobile-nav-link { min-height: 44px; display: flex; align-items: center; }
+      #hero .max-w-\\[1120px\\] { padding-left: 1.15rem; padding-right: 1.15rem; }
+      #hero .flex-col-reverse > div:first-child { min-width: 0; }
+      #hero .flex-col-reverse > div:last-child img { width: min(68vw, 250px); height: auto; margin-inline: auto; }
+      #hero .flex-wrap { gap: .65rem; }
+      #hero .flex-wrap a, #hero .flex-wrap button { min-height: 44px; justify-content: center; }
+      main section { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+      main section .grid { gap: 1rem; }
+      main section [class*="rounded-2xl"], main section [class*="rounded-xl"] { overflow-wrap: anywhere; }
+      main section a, footer a { overflow-wrap: anywhere; }
+      main section a:not([class*="inline"]) { max-width: 100%; }
+      main section button { min-height: 44px; }
+      #contact form { gap: 1rem; }
+      #contact input, #contact textarea, #contact select { border-radius: .75rem; }
+      #contact textarea { min-height: 120px; }
+      #contact button[type="submit"] { width: 100%; }
+      footer .flex { row-gap: .85rem; }
+      /* Prevent iOS Safari from zooming when a form field receives focus. */
+      input, textarea, select { font-size: 16px !important; }
+    }
+    @media (max-width: 420px) {
+      #hero .flex-col-reverse > div:last-child img { width: min(62vw, 220px); }
+      #hero .flex-wrap a, #hero .flex-wrap button { width: 100%; }
+      main section h2 { letter-spacing: -.02em; }
+      main section .text-4xl, main section .text-5xl { font-size: 1.85rem; line-height: 1.2; }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      main section .max-w-\\[1120px\\] { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+
     @media (max-width: 380px) {
       #site-header > div:first-child { padding-left: .65rem; padding-right: .65rem; }
       #site-header > div:first-child > a:first-child > span:last-child { max-width: 42vw; font-size: .72rem; }
