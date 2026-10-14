@@ -789,7 +789,7 @@
             <div class="bg-white dark:bg-slate-900/80 rounded-xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
               <h3 class="font-heading font-semibold text-lg text-slate-900 dark:text-white mb-2">Send a Message</h3>
               <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
-                Fill out the form below or email directly. Messages are routed straight to my primary inbox.
+                Fill out the form below or email directly. Messages sent through this form are delivered to my inbox when the form service is configured.
               </p>
 
               <!-- Success Alert (Hidden by default) -->
@@ -806,11 +806,11 @@
                 <svg class="w-5 h-5 text-rose-600 dark:text-rose-400 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                 <div class="space-y-1">
                   <strong id="contact-error-msg" class="font-semibold block">Unable to send message via form.</strong>
-                  <span>You can also email me directly at <a href="mailto:srbilal12@gmail.com" class="underline font-mono font-medium">srbilal12@gmail.com</a>.</span>
+                  <span>Please try again. If the issue continues, the form service may need its email verification completed.</span>
                 </div>
               </div>
 
-              <form id="contact-form" class="space-y-4">
+              <form id="contact-form" action="https://formspree.io/f/xbjnqzkr" method="POST" class="space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label for="contact-name" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
@@ -823,7 +823,7 @@
                     <label for="contact-email" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
                       Email Address <span class="text-rose-500">*</span>
                     </label>
-                    <input type="email" id="contact-email" name="email" required placeholder="recruiter@example.com" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
+                    <input type="email" id="contact-email" name="_replyto" required placeholder="recruiter@example.com" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
                   </div>
                 </div>
 
@@ -831,7 +831,7 @@
                   <label for="contact-subject" class="block text-xs font-mono font-medium text-slate-700 dark:text-slate-300 mb-1.5">
                     Subject
                   </label>
-                  <input type="text" id="contact-subject" name="subject" placeholder="Cybersecurity Internship Opportunity" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
+                  <input type="text" id="contact-subject" name="_subject" placeholder="Cybersecurity Internship Opportunity" class="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" />
                 </div>
 
                 <div>
@@ -1021,18 +1021,18 @@
           if (submitText) submitText.textContent = 'Sending...';
 
           try {
-            const resp = await fetch('https://formspree.io/f/xbjnqzkr', {
+            // Send standard form data to Formspree.
+            document.getElementById('contact-subject').value = subjectVal || 'Portfolio Inquiry';
+            const formData = new FormData(contactForm);
+            formData.set('name', nameVal);
+            formData.set('_replyto', emailVal);
+            formData.set('_subject', subjectVal || 'Portfolio Inquiry');
+            formData.set('message', messageVal);
+
+            const resp = await fetch(contactForm.action, {
               method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-              },
-              body: JSON.stringify({
-                name: nameVal,
-                email: emailVal,
-                subject: subjectVal || 'Portfolio Inquiry',
-                message: messageVal
-              })
+              body: formData,
+              headers: { 'Accept': 'application/json' }
             });
 
             if (resp.ok) {
@@ -1040,7 +1040,10 @@
               contactForm.reset();
             } else {
               const data = await resp.json().catch(function() { return {}; });
-              throw new Error(data.error || 'Submission failed. Please email directly.');
+              const detail = data.errors && data.errors.length
+                ? data.errors.map(function(item) { return item.message; }).join(' ')
+                : 'The form service rejected the message. Check that the Formspree form is active and your email address is verified.';
+              throw new Error(detail);
             }
           } catch(err) {
             if (errorMsg) errorMsg.textContent = err.message || 'Unable to send message via form.';
