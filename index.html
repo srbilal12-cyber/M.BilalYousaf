@@ -296,6 +296,31 @@
       main section .max-w-\\[1120px\\] { padding-left: 1.5rem; padding-right: 1.5rem; }
     }
 
+    /* Keep the hero portrait centered and compact on phones; use the same portrait in the header brand. */
+    @media (max-width: 767px) {
+      #hero .flex-col-reverse > div:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #hero .flex-col-reverse > div:last-child .relative.w-40 {
+        width: min(38vw, 145px);
+        height: min(38vw, 145px);
+        margin-inline: auto;
+      }
+      #hero .flex-col-reverse > div:last-child .absolute.-bottom-2 {
+        font-size: 10px;
+        padding: .2rem .6rem;
+      }
+    }
+    @media (max-width: 420px) {
+      #hero .flex-col-reverse > div:last-child .relative.w-40 {
+        width: 124px;
+        height: 124px;
+      }
+    }
+
     /* Keep hero text fully inside narrow phone screens */
     @media (max-width: 767px) {
       #hero, #hero * { min-width: 0; box-sizing: border-box; }
@@ -337,8 +362,8 @@
       
       <!-- Brand Logo -->
       <a href="#" class="group inline-flex items-center gap-2 font-heading font-semibold text-base sm:text-lg text-slate-900 dark:text-slate-100 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-md py-1 transition-colors">
-        <span class="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-mono text-sm font-bold">
-          BY
+        <span class="w-8 h-8 rounded-full overflow-hidden border border-emerald-500/50 flex-shrink-0 bg-slate-800 shadow-sm">
+          <img src="./bilal_headshot.jpg" alt="Bilal" class="w-full h-full object-cover object-center" width="32" height="32" />
         </span>
         <span class="tracking-tight">Muhammad Bilal Yousaf</span>
       </a>
