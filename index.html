@@ -96,6 +96,30 @@
       table { display: block; max-width: 100%; overflow-x: auto; }
     }
   </style>
+  <style>
+    /* Specifically keep the About Me biography fully readable on phones */
+    #about, #about > div, #about .grid, #about .grid > div {
+      min-width: 0;
+      max-width: 100%;
+    }
+    #about p {
+      width: 100%;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: break-word;
+      word-break: normal;
+      text-overflow: clip;
+    }
+    #about strong { overflow-wrap: anywhere; }
+    @media (max-width: 640px) {
+      #about { padding-left: 0; padding-right: 0; }
+      #about > div { padding-left: 1rem; padding-right: 1rem; }
+      #about .grid { grid-template-columns: minmax(0, 1fr); }
+      #about .grid > div { width: 100%; min-width: 0; }
+      #about .grid > div:first-child { overflow: visible; }
+      #about .grid > div:last-child { padding: 1rem; }
+    }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
