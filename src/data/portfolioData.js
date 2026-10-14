@@ -20,7 +20,7 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/srbilal12-cyber",
     linkedin: "https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b",
     email: "srbilal12@gmail.com",
-    resumeUrl: "./assets/Muhammad_Bilal_Yousaf_Resume.html",
+    resumeUrl: "./Muhammad_Bilal_Yousaf_Resume.html",
     hemoscanLive: "https://hemo-scan--srbilal12.replit.app/"
   },
 
