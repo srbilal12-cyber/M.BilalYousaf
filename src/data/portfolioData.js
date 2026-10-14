@@ -10,7 +10,7 @@ export const PORTFOLIO_DATA = {
     role: "BS Cybersecurity Student & Software Developer",
     institution: "Capital University of Science and Technology (CUST)",
     degree: "Bachelor of Science in Cybersecurity",
-    expectedGraduation: "Expected 2026",
+    expectedGraduation: "Currently Enrolled",
     availability: "Available for Cybersecurity Internships & Junior SOC Roles",
     locationNote: "Based in Islamabad / Azad Kashmir, Pakistan",
     intro: "I study cybersecurity at Capital University of Science and Technology (CUST) with an emphasis on defensive security, network fundamentals, and applied software development. Currently seeking an internship or junior SOC analyst opportunity to apply hands-on problem solving to real-world security challenges."
@@ -32,7 +32,7 @@ export const PORTFOLIO_DATA = {
       campus: "Islamabad, Pakistan",
       degree: "Bachelor of Science in Cybersecurity",
       status: "Currently Enrolled (Undergraduate)",
-      graduationYear: "Expected 2026",
+      graduationYear: "Currently Enrolled",
       coursework: [
         "Network Security",
         "Operating Systems",
@@ -51,7 +51,7 @@ export const PORTFOLIO_DATA = {
     subtitle: "Java Swing Desktop Application",
     description: "Built an educational voting-system prototype with a desktop ballot form, CNIC-format validation, duplicate-entry checks, local vote storage, admin-gated results, vote totals, percentages, and a bar-chart dashboard.",
     techTags: ["Java", "Swing GUI", "File Handling", "Collections", "Input Validation"],
-    githubUrl: "https://github.com/srbilal12-cyber/M.BilalYousaf/tree/main/projects",
+    githubUrl: "https://github.com/srbilal12-cyber/M.BilalYousaf",
     disclaimer: "Academic demo only; not an official election platform and not connected to ECP or biometric verification."
   }],
 
