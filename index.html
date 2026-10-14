@@ -45,24 +45,36 @@
 
   <!-- Typography: Sora (Headings), Inter (Body), JetBrains Mono (Labels/Code) -->
   <style>
-    /* Animated, still-clickable social links beneath the intro */
-    .connect-train > a {
+    /* Smooth marquee for the social links: continuous, one line, touch/drag supported */
+    .connect-marquee {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
       position: relative;
-      animation: connectTrainRide 1.8s ease-in-out infinite;
-      will-change: transform;
+      touch-action: pan-y;
+      cursor: grab;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+      mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
     }
-    .connect-train > a:nth-of-type(2) { animation-delay: .18s; }
-    .connect-train > a:nth-of-type(3) { animation-delay: .36s; }
-    .connect-train > a:hover,
-    .connect-train > a:focus-visible { animation-play-state: paused; }
+    .connect-marquee.is-dragging { cursor: grabbing; }
+    .connect-track {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: max-content;
+      white-space: nowrap;
+      will-change: transform;
+      animation: connectTrainRide 24s linear infinite;
+    }
+    .connect-track:hover,
+    .connect-marquee:focus-within .connect-track { animation-play-state: paused; }
+    .connect-marquee .connect-item { flex: 0 0 auto; }
     @keyframes connectTrainRide {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(3px); }
-      50% { transform: translateX(6px); }
-      75% { transform: translateX(3px); }
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .connect-train > a { animation: none; }
+      .connect-track { animation: none; }
     }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -380,24 +392,85 @@
               </a>
             </div>
 
-            <!-- Profile Links -->
-            <div class="connect-train flex flex-wrap items-center justify-center md:justify-start gap-4 pt-3 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800/60">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500">Connect:</span>
-              <a href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" aria-label="GitHub Profile">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                <span>srbilal12-cyber</span>
-              </a>
-              <span class="text-slate-300 dark:text-slate-700">•</span>
-              <a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" aria-label="LinkedIn Profile">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                <span>LinkedIn</span>
-              </a>
-              <span class="text-slate-300 dark:text-slate-700">•</span>
-              <a href="mailto:srbilal12@gmail.com" class="inline-flex items-center gap-1.5 text-xs hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" aria-label="Email Muhammad Bilal Yousaf">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <span>Email</span>
-              </a>
+            <!-- Profile Links: continuously moving marquee, all links remain clickable -->
+            <div class="connect-marquee pt-3 border-t border-slate-100 dark:border-slate-800/60" aria-label="Connect links. Swipe or drag to move backwards or forwards.">
+              <div class="connect-track" id="connectTrack">
+                <span class="connect-item text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500">Connect:</span>
+                <a class="connect-item inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  <span>srbilal12-cyber</span>
+                </a>
+                <span class="connect-item text-slate-300 dark:text-slate-700">•</span>
+                <a class="connect-item inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <span class="connect-item text-slate-300 dark:text-slate-700">•</span>
+                <a class="connect-item inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 rounded p-1" href="mailto:srbilal12@gmail.com" aria-label="Email Muhammad Bilal Yousaf">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span>Email</span>
+                </a>
+                <span class="connect-item text-slate-300 dark:text-slate-700">•</span>
+                <span class="connect-item text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500">Connect:</span>
+                <a class="connect-item inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors rounded p-1" href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  <span>srbilal12-cyber</span>
+                </a>
+                <span class="connect-item text-slate-300 dark:text-slate-700">•</span>
+                <a class="connect-item inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors rounded p-1" href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <span class="connect-item text-slate-300 dark:text-slate-700">•</span>
+                <a class="connect-item inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors rounded p-1" href="mailto:srbilal12@gmail.com" aria-label="Email Muhammad Bilal Yousaf">
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span>Email</span>
+                </a>
+              </div>
             </div>
+            <script>
+              (() => {
+                const marquee = document.querySelector('.connect-marquee');
+                const track = document.getElementById('connectTrack');
+                if (!marquee || !track) return;
+                let dragging = false, startX = 0, startOffset = 0, offset = 0;
+                const duration = 24000;
+                const loopWidth = () => track.scrollWidth / 2;
+                const getOffset = () => {
+                  const transform = getComputedStyle(track).transform;
+                  if (!transform || transform === 'none') return 0;
+                  return new DOMMatrixReadOnly(transform).m41;
+                };
+                marquee.addEventListener('pointerdown', (e) => {
+                  if (e.target.closest('a')) return;
+                  dragging = true; startX = e.clientX; startOffset = getOffset();
+                  track.style.animationPlayState = 'paused';
+                  marquee.classList.add('is-dragging');
+                  marquee.setPointerCapture(e.pointerId);
+                });
+                marquee.addEventListener('pointermove', (e) => {
+                  if (!dragging) return;
+                  const width = loopWidth();
+                  offset = ((startOffset + e.clientX - startX) % width + width) % width;
+                  track.style.transform = `translateX(${offset - width}px)`;
+                });
+                const release = () => {
+                  if (!dragging) return;
+                  dragging = false;
+                  marquee.classList.remove('is-dragging');
+                  const width = loopWidth();
+                  track.style.animation = 'none';
+                  track.style.transform = `translateX(${offset - width}px)`;
+                  requestAnimationFrame(() => {
+                    track.style.animation = '';
+                    track.style.animationPlayState = '';
+                  });
+                };
+                marquee.addEventListener('pointerup', release);
+                marquee.addEventListener('pointercancel', release);
+              })();
+            </script>
+
           </div>
 
           <!-- Headshot Column -->
