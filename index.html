@@ -97,27 +97,32 @@
     }
   </style>
   <style>
-    /* Specifically keep the About Me biography fully readable on phones */
-    #about, #about > div, #about .grid, #about .grid > div {
+    /* Fit the hero text under Muhammad Bilal Yousaf inside narrow phone screens */
+    #hero, #hero > div, #hero .grid, #hero .grid > div,
+    #hero .space-y-3, #hero .space-y-3 > * {
       min-width: 0;
       max-width: 100%;
     }
-    #about p {
-      width: 100%;
+    #hero h1 {
+      max-width: 100%;
+      font-size: clamp(1.65rem, 7.2vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    #hero p {
       max-width: 100%;
       white-space: normal;
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
       word-break: normal;
-      text-overflow: clip;
     }
-    #about strong { overflow-wrap: anywhere; }
-    @media (max-width: 640px) {
-      #about { padding-left: 0; padding-right: 0; }
-      #about > div { padding-left: 1rem; padding-right: 1rem; }
-      #about .grid { grid-template-columns: minmax(0, 1fr); }
-      #about .grid > div { width: 100%; min-width: 0; }
-      #about .grid > div:first-child { overflow: visible; }
-      #about .grid > div:last-child { padding: 1rem; }
+    @media (max-width: 420px) {
+      #hero > div { padding-left: 1rem; padding-right: 1rem; }
+      #hero .text-base { font-size: .95rem; }
+      #hero .text-lg { font-size: 1rem; line-height: 1.45; }
+      #hero .font-mono { letter-spacing: 0; }
+      #hero .inline-flex.rounded-full { white-space: normal; max-width: 100%; }
     }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
