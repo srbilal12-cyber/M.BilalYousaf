@@ -296,6 +296,48 @@
       main section .max-w-\\[1120px\\] { padding-left: 1.5rem; padding-right: 1.5rem; }
     }
 
+    /* A subtle animated emerald-to-blue orbit around the profile portrait */
+    .hero-portrait-orbit {
+      isolation: isolate;
+      z-index: 0;
+    }
+    .hero-portrait-orbit::before {
+      content: "";
+      position: absolute;
+      inset: -11px;
+      border-radius: 50%;
+      padding: 2px;
+      background: conic-gradient(from 0deg, transparent 0deg, #10b981 65deg, #67e8f9 125deg, #3b82f6 180deg, transparent 235deg, transparent 360deg);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: portraitOrbitSpin 5s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-portrait-orbit::after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      top: 4%;
+      right: 1%;
+      background: #34d399;
+      box-shadow: 0 0 12px #34d399, 0 0 22px #0ea5e9;
+      animation: portraitOrbitSpin 5s linear infinite;
+      transform-origin: -85px 85px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    @keyframes portraitOrbitSpin {
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-portrait-orbit::before,
+      .hero-portrait-orbit::after { animation: none; }
+    }
+
     /* Keep the hero portrait centered and compact on phones; use the same portrait in the header brand. */
     @media (max-width: 767px) {
       #hero .flex-col-reverse > div:last-child {
@@ -564,9 +606,9 @@
 
           <!-- Headshot Column -->
           <div class="flex-shrink-0">
-            <div class="relative group">
+            <div class="relative group hero-portrait-orbit">
               <div class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-emerald-500/20 via-teal-500/10 to-blue-500/20 blur-sm pointer-events-none"></div>
-              <div class="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-md">
+              <div class="relative z-10 w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-md">
                 <img src="./bilal_headshot.jpg" alt="Muhammad Bilal Yousaf - BS Cybersecurity student at CUST" class="w-full h-full object-cover object-center" width="224" height="224" />
               </div>
               <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm text-[11px] font-mono font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap">
