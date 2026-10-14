@@ -991,69 +991,9 @@
         });
       }
 
-      // 4. Contact Form AJAX Submission (Formspree)
-      const contactForm = document.getElementById('contact-form');
-      const successBox = document.getElementById('contact-success');
-      const errorBox = document.getElementById('contact-error');
-      const errorMsg = document.getElementById('contact-error-msg');
-      const submitBtn = document.getElementById('contact-submit-btn');
-      const submitText = document.getElementById('contact-submit-text');
-
-      if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-          e.preventDefault();
-
-          if (successBox) successBox.classList.add('hidden');
-          if (errorBox) errorBox.classList.add('hidden');
-
-          const nameVal = document.getElementById('contact-name').value.trim();
-          const emailVal = document.getElementById('contact-email').value.trim();
-          const subjectVal = document.getElementById('contact-subject').value.trim();
-          const messageVal = document.getElementById('contact-message').value.trim();
-
-          if (!nameVal || !emailVal || !messageVal) {
-            if (errorMsg) errorMsg.textContent = 'Please fill in all required fields (Name, Email, Message).';
-            if (errorBox) errorBox.classList.remove('hidden');
-            return;
-          }
-
-          if (submitBtn) submitBtn.disabled = true;
-          if (submitText) submitText.textContent = 'Sending...';
-
-          try {
-            // Send standard form data to Formspree.
-            document.getElementById('contact-subject').value = subjectVal || 'Portfolio Inquiry';
-            const formData = new FormData(contactForm);
-            formData.set('name', nameVal);
-            formData.set('_replyto', emailVal);
-            formData.set('_subject', subjectVal || 'Portfolio Inquiry');
-            formData.set('message', messageVal);
-
-            const resp = await fetch(contactForm.action, {
-              method: 'POST',
-              body: formData,
-              headers: { 'Accept': 'application/json' }
-            });
-
-            if (resp.ok) {
-              if (successBox) successBox.classList.remove('hidden');
-              contactForm.reset();
-            } else {
-              const data = await resp.json().catch(function() { return {}; });
-              const detail = data.errors && data.errors.length
-                ? data.errors.map(function(item) { return item.message; }).join(' ')
-                : 'The form service rejected the message. Check that the Formspree form is active and your email address is verified.';
-              throw new Error(detail);
-            }
-          } catch(err) {
-            if (errorMsg) errorMsg.textContent = err.message || 'Unable to send message via form.';
-            if (errorBox) errorBox.classList.remove('hidden');
-          } finally {
-            if (submitBtn) submitBtn.disabled = false;
-            if (submitText) submitText.textContent = 'Send Message';
-          }
-        });
-      }
+      // 4. Contact Form
+      // Submit directly to Formspree using the form's action and method.
+      // Native submission avoids browser fetch/CORS errors and uses the named form fields.
     })();
   </script>
 </body>
