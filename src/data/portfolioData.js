@@ -52,7 +52,9 @@ export const PORTFOLIO_DATA = {
     techTags: ["Java", "Swing GUI", "File Handling", "Collections", "Input Validation"],
     githubUrl: "https://github.com/srbilal12-cyber/M.BilalYousaf/tree/main/projects",
     disclaimer: "Academic demo only; not an official election platform and not connected to ECP or biometric verification."
-  }],\n\n  featuredProject: {
+  }],
+
+  featuredProject: {
     title: "HemoScan",
     subtitle: "AI-Assisted Non-Invasive Hemoglobin Estimation Prototype",
     disclaimer: "Research prototype, not a medical device. This software is developed solely for academic exploration and optical signal experimentation. It is not approved by regulatory bodies and must never be used as a substitute for professional clinical medical advice, certified laboratory blood testing, or clinical diagnosis.",
