@@ -126,7 +126,7 @@ public class VotingMachine extends JFrame implements ActionListener {
         try (BufferedWriter writer = Files.newBufferedWriter(
                 voteFile, StandardCharsets.UTF_8,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
-            writer.write(hashedId + "\\t" + party);
+            writer.write(hashedId + "\t" + party);
             writer.newLine();
             return true;
         } catch (IOException ex) {
