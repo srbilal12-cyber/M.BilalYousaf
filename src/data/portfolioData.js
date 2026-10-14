@@ -21,7 +21,8 @@ export const PORTFOLIO_DATA = {
     linkedin: "https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b",
     email: "srbilal12@gmail.com",
     resumeUrl: "./Muhammad_Bilal_Yousaf_Resume.html",
-    hemoscanLive: "https://hemo-scan--srbilal12.replit.app/"
+    hemoscanLive: "https://hemo-scan--srbilal12.replit.app/",
+    tryhackme: "https://tryhackme.com/p/BilalYousaf"
   },
 
   about: {
@@ -118,7 +119,7 @@ export const PORTFOLIO_DATA = {
         status: "Active Learner",
         description: "Regularly practicing hands-on security rooms covering Linux fundamentals, network reconnaissance, and web application security.",
         linkText: "TryHackMe Profile",
-        url: "https://tryhackme.com"
+        url: "https://tryhackme.com/p/BilalYousaf"
       },
       {
         title: "CUST Academic Security Labs",
