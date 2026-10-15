@@ -2,347 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Bilal Yousaf — Curriculum Vitae / Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ATS-friendly resume of Muhammad Bilal Yousaf, BS Cybersecurity student at CUST.">
+  <title>Muhammad Bilal Yousaf | Resume</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #1e293b;
-      background-color: #f1f5f9;
-      line-height: 1.5;
-      padding: 40px 20px;
+      margin: 0;
+      padding: 28px 16px;
+      background: #eef2f6;
+      color: #17212f;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.42;
     }
-    .resume-container {
-      max-width: 850px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 50px 60px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    }
-    header {
-      border-bottom: 2px solid #10b981;
-      padding-bottom: 24px;
-      margin-bottom: 28px;
-    }
-    .header-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.02em;
-    }
-    .subtitle {
-      font-size: 14px;
-      font-weight: 600;
-      color: #10b981;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 4px;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 6px 20px;
-      margin-top: 16px;
-      font-size: 13px;
-      color: #475569;
-    }
-    .contact-grid a {
-      color: #0284c7;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .contact-grid a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 24px;
-    }
-    h2 {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #0f172a;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 6px;
-      margin-bottom: 12px;
-    }
-    .summary-text {
-      font-size: 13.5px;
-      color: #475569;
-      line-height: 1.6;
-    }
-    .experience-item, .project-item {
-      margin-bottom: 16px;
-    }
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 4px;
-    }
-    .item-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #0f172a;
-    }
-    .item-subtitle {
-      font-size: 13px;
-      font-weight: 600;
-      color: #0284c7;
-    }
-    .item-date {
-      font-size: 12px;
-      font-family: 'JetBrains Mono', monospace;
-      color: #64748b;
-    }
-    ul.bullet-list {
-      list-style-type: square;
-      padding-left: 20px;
-      margin-top: 6px;
-      font-size: 13px;
-      color: #334155;
-    }
-    ul.bullet-list li {
-      margin-bottom: 4px;
-      line-height: 1.5;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-    .skill-card {
-      background: #f8fafc;
-      padding: 12px 14px;
-      border-radius: 8px;
-      border: 1px solid #334155;
-    }
-    .skill-title {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 4px;
-    }
-    .skill-desc {
-      font-size: 12px;
-      color: #475569;
-      line-height: 1.4;
-    }
-    .print-actions {
+    .actions {
+      max-width: 800px;
+      margin: 0 auto 14px;
       display: flex;
       justify-content: flex-end;
-      gap: 12px;
-      margin-bottom: 20px;
-      max-width: 850px;
-      margin: 0 auto 20px auto;
+      gap: 10px;
     }
-    .btn {
-      padding: 10px 18px;
-      font-size: 13px;
-      font-weight: 600;
-      border-radius: 6px;
-      cursor: pointer;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    .actions a, .actions button {
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      padding: 9px 13px;
+      font: inherit;
+      font-size: 10pt;
       text-decoration: none;
-      transition: all 0.2s;
+      cursor: pointer;
+      background: #fff;
+      color: #17212f;
     }
-    .btn-primary {
-      background: #10b981;
-      color: #ffffff;
+    .actions .primary { background: #174a75; color: #fff; border-color: #174a75; }
+    .resume {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 42px 48px;
+      background: #fff;
+      box-shadow: 0 4px 22px rgba(15, 23, 42, .08);
     }
-    .btn-primary:hover {
-      background: #059669;
+    header { border-bottom: 2px solid #174a75; padding-bottom: 14px; margin-bottom: 17px; }
+    h1 { margin: 0 0 4px; font-size: 25pt; line-height: 1.15; letter-spacing: -.5px; color: #12263a; }
+    .headline { margin: 0 0 9px; color: #174a75; font-size: 11.5pt; font-weight: 700; }
+    .contact { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 9.5pt; }
+    a { color: #174a75; text-decoration: none; overflow-wrap: anywhere; }
+    section { margin-top: 15px; }
+    h2 {
+      margin: 0 0 7px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #aab7c5;
+      color: #174a75;
+      font-size: 11pt;
+      letter-spacing: .7px;
+      text-transform: uppercase;
     }
-    .btn-secondary {
-      background: #e2e8f0;
-      color: #0f172a;
+    p { margin: 0; }
+    .entry { margin-bottom: 10px; break-inside: avoid; }
+    .entry-title { font-weight: 700; color: #17212f; }
+    .meta { color: #4b5968; font-size: 9.5pt; }
+    ul { margin: 5px 0 0; padding-left: 18px; }
+    li { margin: 2px 0; padding-left: 1px; }
+    .skills p { margin: 4px 0; }
+    .skills strong { color: #17212f; }
+    .note { color: #4b5968; font-size: 9pt; }
+    @media (max-width: 600px) {
+      body { padding: 10px 6px; font-size: 10pt; }
+      .resume { padding: 24px 18px; }
+      h1 { font-size: 22pt; }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .actions a, .actions button { text-align: center; min-height: 42px; }
+      .contact { flex-direction: column; gap: 4px; }
     }
-    .btn-secondary:hover {
-      background: #cbd5e1;
-    }
-    /* Mobile layout improvements */
-    body { min-width: 0; overflow-wrap: anywhere; }
-    .resume-container, .print-actions { min-width: 0; width: 100%; }
-    img, table { max-width: 100%; }
-    @media (max-width: 640px) {
-      body { padding: 16px 10px; }
-      .resume-container { padding: 24px 16px; border-radius: 10px; }
-      .print-actions { display: grid; grid-template-columns: 1fr; gap: 8px; }
-      .print-actions .btn { justify-content: center; width: 100%; min-height: 44px; }
-      h1 { font-size: clamp(22px, 7vw, 28px); line-height: 1.2; overflow-wrap: anywhere; }
-      .subtitle { font-size: 11px; line-height: 1.5; letter-spacing: .04em; }
-      .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-      .contact-grid > div, .contact-grid a { overflow-wrap: anywhere; word-break: break-word; }
-      .item-header { flex-direction: column; align-items: flex-start; gap: 2px; }
-      .skills-grid { grid-template-columns: minmax(0, 1fr); }
-      .resume-container section { min-width: 0; }
-    }
-
+    @page { size: A4; margin: 14mm; }
     @media print {
-      body {
-        background: #ffffff;
-        padding: 0;
-      }
-      .resume-container {
-        box-shadow: none;
-        padding: 0;
-        max-width: 100%;
-      }
-      .print-actions {
-        display: none;
-      }
-    }
-    @media (max-width: 640px) {
-      .resume-container {
-        padding: 30px 20px;
-      }
-      .contact-grid, .skills-grid {
-        grid-template-columns: 1fr;
-      }
+      body { padding: 0; background: #fff; font-size: 9.5pt; line-height: 1.32; }
+      .actions { display: none; }
+      .resume { max-width: none; padding: 0; box-shadow: none; }
+      header { margin-bottom: 12px; }
+      section { margin-top: 11px; }
+      .entry { margin-bottom: 7px; }
+      a { color: #17212f; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Print Actions Bar -->
-  <div class="print-actions">
-    <button class="btn btn-primary" onclick="window.print()">
-      🖨️ Print / Save as PDF
-    </button>
-    <a href="./index.html" class="btn btn-secondary">
-      ← Back to Portfolio
-    </a>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">Print / Save as PDF</button>
+    <a href="./index.html">Back to Portfolio</a>
   </div>
 
-  <div class="resume-container">
+  <main class="resume">
     <header>
-      <div class="header-top">
-        <div>
-          <h1>Muhammad Bilal Yousaf</h1>
-          <div class="subtitle">BS Cybersecurity Student • Aspiring Cloud Security Professional</div>
-        </div>
-      </div>
-      <div class="contact-grid">
-        <div><strong>Email:</strong> <a href="mailto:srbilal12@gmail.com">srbilal12@gmail.com</a></div>
-        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b" target="_blank">in/muhammad-bilal-yousaf-a2a93140b</a></div>
-        <div><strong>GitHub:</strong> <a href="https://github.com/srbilal12-cyber" target="_blank" rel="noopener">github.com/srbilal12-cyber</a></div>
-        <div><strong>TryHackMe:</strong> <a href="https://tryhackme.com/p/BilalYousaf" target="_blank" rel="noopener">tryhackme.com/p/BilalYousaf</a></div>
-        <div><strong>Portfolio:</strong> <a href="https://m-bilal-yousaf.vercel.app/" target="_blank" rel="noopener">Live portfolio</a></div>
-        <div><strong>University:</strong> Capital University of Science &amp; Technology (cust.pk) — BS Cybersecurity (In Progress)</div>
+      <h1>Muhammad Bilal Yousaf</h1>
+      <p class="headline">BS Cybersecurity Student | Aspiring Cybersecurity Intern</p>
+      <div class="contact">
+        <span><a href="mailto:srbilal12@gmail.com">srbilal12@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b">LinkedIn Profile</a></span>
+        <span><a href="https://github.com/srbilal12-cyber">GitHub Profile</a></span>
+        <span><a href="https://m-bilal-yousaf.vercel.app/">Portfolio</a></span>
+        <span><a href="https://tryhackme.com/p/BilalYousaf">TryHackMe Profile</a></span>
+        <span>Islamabad, Pakistan</span>
       </div>
     </header>
 
-    <!-- Professional Summary -->
     <section>
-      <h2>Executive Profile</h2>
-      <p class="summary-text">
-        Undergraduate Cybersecurity student at Capital University of Science and Technology (CUST), interested in cloud security, network defense, Linux, and secure software development. Building practical skills through academic coursework, hands-on learning, and personal projects. Seeking opportunities to learn from security teams and contribute to defensive security work.
-      </p>
+      <h2>Professional Summary</h2>
+      <p>Undergraduate Cybersecurity student at Capital University of Science and Technology (CUST), building a foundation in computer networks, operating systems, Linux, programming, and defensive security. Applies coursework through software projects and hands-on practice. Seeking an internship opportunity to strengthen practical security skills and contribute to a professional technical team.</p>
     </section>
 
-    <!-- Featured Project -->
     <section>
-      <h2>Featured Project</h2>
-      <div class="project-item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">HemoScan — Optical Hemoglobin Estimation Prototype</span>
-            <span class="item-subtitle"> | Personal / Academic Project</span>
-          </div>
-        </div>
-        <p class="summary-text" style="font-size: 13px; margin-bottom: 4px;">
-          Live prototype: <a href="https://hemo-scan--srbilal12.replit.app/" target="_blank" rel="noopener" style="color: #10b981;">hemo-scan--srbilal12.replit.app</a>
-        </p>
-        <ul class="bullet-list">
-          <li>Built a web application prototype exploring camera-based optical signals for non-invasive hemoglobin estimation.</li>
-          <li>Worked with camera input, region-of-interest processing, RGB intensity changes, and signal-noise considerations.</li>
-          <li>Documented limitations including lighting conditions, differences between phone cameras, contact pressure, and lack of clinical validation.</li>
-        </ul>
-        <p class="summary-text" style="font-size: 12px; margin-top: 8px;"><strong>Safety note:</strong> Research prototype only; not a medical device or a substitute for clinical testing.</p>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-title">Capital University of Science and Technology (CUST)</div>
+        <div>Bachelor of Science in Cybersecurity</div>
+        <div class="meta">Islamabad, Pakistan | Currently enrolled | Expected graduation: 2029</div>
+        <div class="meta">Relevant coursework: Computer Networks, Operating Systems, Object-Oriented Programming, Data Structures and Algorithms, Cryptography Fundamentals, Network Security.</div>
       </div>
     </section>
 
-
-      <div class="project-item">
-        <div class="item-header">
-          <div><span class="item-title">Java Voting System — Desktop Application</span><span class="item-subtitle"> | Academic Project</span></div>
-        </div>
-        <p class="summary-text" style="font-size: 13px; margin-bottom: 4px;">Source code: <a href="https://github.com/srbilal12-cyber/M.BilalYousaf" target="_blank" rel="noopener" style="color: #10b981;">GitHub portfolio repository</a></p>
-        <ul class="bullet-list">
-          <li>Developed a Java Swing desktop interface for selecting a party and submitting a vote.</li>
-          <li>Implemented 13-digit CNIC format checks, duplicate-entry prevention using hashed identifiers, and local file-based vote storage.</li>
-          <li>Added password-gated result viewing with vote totals, percentages, tie/no-vote handling, and a bar-chart dashboard.</li>
-        </ul>
-        <p class="summary-text" style="font-size: 12px; margin-top: 8px;"><strong>Scope:</strong> Academic prototype only; not an official election or biometric verification system.</p>
-      </div>
-
-    <!-- Technical Proficiencies -->
     <section>
       <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-title">Programming &amp; Web</div>
-          <div class="skill-desc">Python, C++, Java fundamentals, HTML, CSS, React fundamentals.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-title">Cybersecurity &amp; Systems</div>
-          <div class="skill-desc">Linux basics, TCP/IP, DNS, subnetting fundamentals, Wireshark basics, cryptography fundamentals, web security concepts.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-title">Tools &amp; Documentation</div>
-          <div class="skill-desc">Git, GitHub, Visual Studio Code, Microsoft Word, Excel, and PowerPoint.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-title">Current Learning</div>
-          <div class="skill-desc">Cloud security fundamentals, AWS fundamentals, SOC operations, log analysis, and incident response.</div>
-        </div>
+      <div class="skills">
+        <p><strong>Programming:</strong> Python, C++, Java fundamentals.</p>
+        <p><strong>Cybersecurity and Networking:</strong> Linux fundamentals, TCP/IP, DNS, subnetting fundamentals, Wireshark basics, cryptography fundamentals, web security concepts.</p>
+        <p><strong>Development Tools:</strong> Git, GitHub, Visual Studio Code, HTML, CSS, React fundamentals.</p>
+        <p><strong>Productivity:</strong> Microsoft Word, Excel, PowerPoint.</p>
       </div>
     </section>
 
-    <!-- Education -->
     <section>
-      <h2>Education &amp; Credentials</h2>
-      <div class="item-header">
-        <div>
-          <span class="item-title">Capital University of Science and Technology (CUST)</span>
-          <div class="item-subtitle">Bachelor of Science in Cybersecurity (In Progress / Undergraduate Student)</div>
-        </div>
-        <span class="item-date">Islamabad, Pakistan</span>
+      <h2>Projects</h2>
+      <div class="entry">
+        <div class="entry-title">HemoScan — Optical Hemoglobin Estimation Prototype</div>
+        <div class="meta">Personal project | <a href="https://hemo-scan--srbilal12.replit.app/">Live prototype</a></div>
+        <ul>
+          <li>Developed a web application prototype exploring camera-based optical signals for non-invasive hemoglobin estimation.</li>
+          <li>Worked with camera input, image region selection, RGB intensity changes, and signal-noise considerations.</li>
+          <li>Documented limitations related to lighting, phone-camera differences, finger contact, and the absence of clinical validation.</li>
+        </ul>
+        <p class="note">Research prototype only; not a medical device and not intended for diagnosis or treatment.</p>
       </div>
-      <p class="summary-text" style="margin-top: 6px; font-size: 13px;">
-        Undergraduate study in Cybersecurity. Relevant study areas include computer networks, operating systems, object-oriented programming, data structures, cryptography fundamentals, and network security.
-      </p>
+
+      <div class="entry">
+        <div class="entry-title">Java Voting System — Desktop Application</div>
+        <div class="meta">Academic project | <a href="https://github.com/srbilal12-cyber/M.BilalYousaf">GitHub repository</a></div>
+        <ul>
+          <li>Built a Java Swing interface for voter details, party selection, vote submission, and result viewing.</li>
+          <li>Practiced input validation, duplicate-entry prevention, local file-based storage, and vote-count summaries.</li>
+          <li>Designed result handling for vote totals and percentage display in an academic prototype.</li>
+        </ul>
+        <p class="note">Educational demonstration only; not an official election system.</p>
+      </div>
     </section>
+
     <section>
-      <h2>Practical Learning &amp; Interests</h2>
-      <ul class="bullet-list">
-        <li>Practicing programming, networking, Linux, and cybersecurity fundamentals through coursework and independent learning on TryHackMe.</li>
-        <li>TryHackMe profile: <a href="https://tryhackme.com/p/BilalYousaf" target="_blank" rel="noopener" style="color: #10b981;">View hands-on cybersecurity learning profile</a></li>
-        <li>Developing a cloud-security learning path covering AWS fundamentals, networking, Linux, and Python automation.</li>
-        <li>Professional interests: Cloud Security, Network Defense, SOC Operations, Incident Response, and Security Automation.</li>
+      <h2>Additional Learning</h2>
+      <ul>
+        <li>Independent practice in cybersecurity fundamentals through TryHackMe and academic lab work.</li>
+        <li>Currently strengthening skills in Linux, networking, log analysis, cloud security fundamentals, and incident response.</li>
       </ul>
     </section>
-    <p class="summary-text" style="font-size: 11px;">This resume reflects current academic learning and personal project work. No unverified employment or completed certifications are claimed.</p>
-  </div>
-
+  </main>
 </body>
 </html>
