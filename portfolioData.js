@@ -10,7 +10,7 @@ export const PORTFOLIO_DATA = {
     role: "BS Cybersecurity Student & Software Developer",
     institution: "Capital University of Science and Technology (CUST)",
     degree: "Bachelor of Science in Cybersecurity",
-    expectedGraduation: "Expected 2026",
+    expectedGraduation: "Expected 2029",
     availability: "Available for Cybersecurity Internships & Junior SOC Roles",
     locationNote: "Based in Islamabad / Azad Kashmir, Pakistan",
     intro: "I study cybersecurity at Capital University of Science and Technology (CUST) with an emphasis on defensive security, network fundamentals, and applied software development. Currently seeking an internship or junior SOC analyst opportunity to apply hands-on problem solving to real-world security challenges."
@@ -20,7 +20,7 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/srbilal12-cyber",
     linkedin: "https://www.linkedin.com/in/muhammad-bilal-yousaf-a2a93140b",
     email: "srbilal12@gmail.com",
-    resumeUrl: "./assets/Muhammad_Bilal_Yousaf_Resume.html",
+    resumeUrl: "./Muhammad_Bilal_Yousaf_Resume.html",
     hemoscanLive: "https://hemo-scan--srbilal12.replit.app/"
   },
 
@@ -31,7 +31,7 @@ export const PORTFOLIO_DATA = {
       campus: "Islamabad, Pakistan",
       degree: "Bachelor of Science in Cybersecurity",
       status: "Currently Enrolled (Undergraduate)",
-      graduationYear: "Expected 2026",
+      graduationYear: "Expected 2029",
       coursework: [
         "Network Security",
         "Operating Systems",
