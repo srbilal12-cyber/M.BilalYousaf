@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="CYBERPULSE X — a futuristic defensive cybersecurity dashboard with URL inspection and security log analysis.">
+  <title>CYBERPULSE X | Security Operations</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="CyberPulse X home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span><b>CYBERPULSE</b><small>DEFENSE SYSTEMS <i>●</i></small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span>◈</span> Command Center</button>
+        <button class="nav-item" data-view="url"><span>⌁</span> URL Inspector <em>01</em></button>
+        <button class="nav-item" data-view="logs"><span>▤</span> Log Analyzer</button>
+        <button class="nav-item" data-view="missions"><span>⬡</span> Cyber Missions <em class="new-tag">BETA</em></button>
+      </nav>
+      <div class="side-label tools-label">SYSTEM</div>
+      <div class="system-card">
+        <div class="system-orb"><span>✓</span></div>
+        <div><b>Local analysis active</b><small>No server connection</small></div>
+        <span class="pulse-dot"></span>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="avatar">BK</div>
+        <div class="profile-text"><b>BK Production</b><small>Security Lab · Local</small></div>
+        <span class="more">···</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb"><span>WORKSPACE</span><b>/</b><strong id="crumbTitle">COMMAND CENTER</strong></div>
+        <div class="top-actions"><span class="live-status"><i></i> SYSTEM ONLINE</span><span class="top-divider"></span><span class="date-label" id="clock">--:--:-- UTC</span><button class="icon-button" id="refreshBtn" title="Refresh demo data" aria-label="Refresh demo data">↻</button></div>
+      </header>
+
+      <section class="view active-view" id="overviewView">
+        <div class="hero-row">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> SECURITY OPERATIONS CENTER <span class="version">BUILD 1.0.0</span></div>
+            <h1>Threats don't wait.<br><span>Neither do we.</span></h1>
+            <p class="hero-copy">Your compact command center for understanding suspicious signals and strengthening digital defenses.</p>
+          </div>
+          <div class="hero-chip"><div class="chip-ring">✳</div><div><small>DEFENSE POSTURE</small><b>MONITORING</b><span>Local demo environment</span></div></div>
+        </div>
+
+        <div class="notice"><span class="notice-icon">ⓘ</span><div><b>Simulation environment</b><span>Radar events and headline metrics are sample data for demonstration — they are not live global attack telemetry.</span></div><span class="notice-tag">DEMO DATA</span></div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>EVENTS ANALYZED</span><span class="stat-icon cyan">⌁</span></div><div class="stat-number" id="eventsMetric">1,284</div><div class="stat-foot"><span class="tiny-bar"></span> Sample telemetry <span class="muted">· last 24h</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>FLAGGED INDICATORS</span><span class="stat-icon purple">◈</span></div><div class="stat-number" id="flaggedMetric">37</div><div class="stat-foot"><span class="tiny-bar purple-bar"></span> Heuristic detections <span class="muted">· demo</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>LOGINS REVIEWED</span><span class="stat-icon blue">⌑</span></div><div class="stat-number" id="loginsMetric">496</div><div class="stat-foot"><span class="tiny-bar blue-bar"></span> Sample log events <span class="muted">· loaded locally</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>DEFENSE SCORE</span><span class="stat-icon green">⬡</span></div><div class="stat-number">A<span class="score-plus">−</span></div><div class="stat-foot"><span class="score-pill">TRAINING SCORE</span> <span class="muted">not a real audit</span></div></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel radar-panel">
+            <div class="panel-heading"><div><span class="section-kicker">NETWORK VISUALIZATION</span><h2>Threat radar</h2></div><span class="panel-state"><i></i> SIMULATED</span></div>
+            <div class="radar-wrap"><div class="radar-grid"><div class="radar-ring ring-one"></div><div class="radar-ring ring-two"></div><div class="radar-ring ring-three"></div><div class="radar-cross cross-x"></div><div class="radar-cross cross-y"></div><div class="radar-sweep"></div><span class="radar-blip blip-one"></span><span class="radar-blip blip-two"></span><span class="radar-blip blip-three"></span><span class="radar-blip blip-four"></span><span class="radar-center">CPX</span></div><div class="radar-coord coord-a">NODE_07 / 41.2° N</div><div class="radar-coord coord-b">SECURE ZONE / A3</div></div>
+            <div class="radar-legend"><span><i class="legend-dot cyan-dot"></i> Normal activity</span><span><i class="legend-dot red-dot"></i> Suspicious signal</span><span><i class="legend-dot purple-dot"></i> Unknown node</span></div>
+          </article>
+          <article class="panel activity-panel">
+            <div class="panel-heading"><div><span class="section-kicker">EVENT STREAM</span><h2>Security activity</h2></div><button class="text-button" data-jump="logs">Analyze logs ↗</button></div>
+            <div class="activity-list" id="activityList">
+              <div class="activity-row"><span class="activity-symbol danger">!</span><div><b>Repeated login failures</b><small>sample-auth.log · 6 attempts</small></div><span class="severity high">HIGH</span></div>
+              <div class="activity-row"><span class="activity-symbol warn">⌁</span><div><b>URL pattern flagged</b><small>heuristic match · demo event</small></div><span class="severity medium">MEDIUM</span></div>
+              <div class="activity-row"><span class="activity-symbol safe">✓</span><div><b>Local analysis ready</b><small>Browser-only processing</small></div><span class="severity low">INFO</span></div>
+              <div class="activity-row"><span class="activity-symbol info">i</span><div><b>Threat feed not connected</b><small>External intel disabled by default</small></div><span class="severity low">INFO</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="bottom-grid">
+          <article class="panel trend-panel"><div class="panel-heading"><div><span class="section-kicker">SAMPLE TELEMETRY</span><h2>Signal activity</h2></div><span class="muted small">Last 7 intervals</span></div><div class="chart-area"><div class="chart-y"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div class="chart-main"><div class="chart-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 600 170" preserveAspectRatio="none" class="trend-svg" aria-label="Sample activity trend chart"><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#22d3ee" stop-opacity=".28"/><stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/></linearGradient></defs><path d="M0 135 C35 126 43 100 85 111 S140 144 172 88 S230 103 260 75 S313 93 345 53 S396 89 430 63 S480 100 515 39 S565 63 600 20 L600 170 L0 170 Z" fill="url(#chartFill)"/><path d="M0 135 C35 126 43 100 85 111 S140 144 172 88 S230 103 260 75 S313 93 345 53 S396 89 430 63 S480 100 515 39 S565 63 600 20" fill="none" stroke="#35d9ef" stroke-width="2.5" vector-effect="non-scaling-stroke"/><circle cx="515" cy="39" r="4" fill="#07101a" stroke="#35d9ef" stroke-width="2"/></svg><div class="chart-x"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div></div></div><div class="chart-caption"><span><i class="legend-dot cyan-dot"></i> Sample signal volume</span><span>Illustrative · not live data</span></div></article>
+          <article class="panel quick-panel"><div class="panel-heading"><div><span class="section-kicker">QUICK ACTIONS</span><h2>Security tools</h2></div></div><button class="quick-action" data-jump="url"><span class="quick-icon">⌁</span><span><b>Inspect a URL</b><small>Check common risk indicators</small></span><span class="action-arrow">↗</span></button><button class="quick-action" data-jump="logs"><span class="quick-icon purple">▤</span><span><b>Analyze log events</b><small>Find repeated failed logins</small></span><span class="action-arrow">↗</span></button><button class="quick-action" data-jump="missions"><span class="quick-icon green">⬡</span><span><b>Start a cyber mission</b><small>Practice safe defense skills</small></span><span class="action-arrow">↗</span></button></article>
+        </div>
+        <footer class="footer"><span>CYBERPULSE X <span class="footer-dot">●</span> DEFENSIVE SECURITY LAB</span><span>Built for learning by <b>BK Production</b></span></footer>
+      </section>
+
+      <section class="view" id="urlView">
+        <div class="page-heading"><div class="eyebrow"><span class="eyebrow-line"></span> DEFENSIVE TOOLKIT / 01</div><h1>URL <span>Threat Inspector</span></h1><p>Inspect a URL for common suspicious patterns. Analysis runs in your browser; no URL is submitted to a server.</p></div>
+        <article class="panel tool-panel"><div class="panel-heading"><div><span class="section-kicker">INDICATOR ANALYSIS</span><h2>Analyze a URL</h2></div><span class="panel-state"><i></i> LOCAL ENGINE</span></div><form id="urlForm"><label for="urlInput">TARGET URL <span>Enter a URL you have permission to inspect</span></label><div class="input-row"><span class="input-prefix">↗</span><input id="urlInput" type="text" placeholder="https://example.com/login" autocomplete="url" spellcheck="false" required><button class="primary-button" type="submit">Analyze URL <span>→</span></button></div><div class="sample-row"><span>Try sample:</span><button type="button" class="sample-link" data-sample="https://example.com">Normal example</button><button type="button" class="sample-link" data-sample="http://secure-account-login.example.invalid/verify?redirect=http://bad.invalid">Suspicious pattern</button></div></form><div id="urlResult" class="result-placeholder"><div class="placeholder-icon">⌁</div><b>Waiting for an indicator</b><span>Enter a URL above to generate a local heuristic report.</span></div></article>
+        <div class="info-grid"><article class="panel info-card"><span class="info-symbol cyan">01</span><h3>Structure checks</h3><p>Looks for unusual length, raw IP hosts, user-info tricks, non-HTTPS schemes and confusing subdomain patterns.</p></article><article class="panel info-card"><span class="info-symbol purple">02</span><h3>Explainable flags</h3><p>Each finding includes the pattern that triggered it. This is a heuristic aid, not a malware verdict.</p></article><article class="panel info-card"><span class="info-symbol green">03</span><h3>Privacy by design</h3><p>The URL is parsed locally. This version does not visit the target or send it to a third party.</p></article></div>
+        <footer class="footer"><span>CYBERPULSE X <span class="footer-dot">●</span> URL INSPECTOR</span><span>Heuristics can miss threats or flag legitimate sites.</span></footer>
+      </section>
+
+      <section class="view" id="logsView">
+        <div class="page-heading"><div class="eyebrow"><span class="eyebrow-line"></span> DEFENSIVE TOOLKIT / 02</div><h1>Security <span>Log Analyzer</span></h1><p>Review sample or authorized authentication logs and identify repeated failed logins and suspicious event patterns.</p></div>
+        <article class="panel tool-panel"><div class="panel-heading"><div><span class="section-kicker">LOG FORENSICS</span><h2>Event input</h2></div><span class="panel-state"><i></i> BROWSER ONLY</span></div><div class="log-toolbar"><span>ACCEPTED FORMAT: timestamp username IP status</span><div><button class="secondary-button" id="loadSample">Load sample logs</button><button class="secondary-button" id="clearLogs">Clear</button></div></div><label for="logInput">LOG DATA <span>Use fictional data or logs you are authorized to analyze</span></label><textarea id="logInput" rows="9" spellcheck="false" placeholder="2026-10-16T10:10:00Z user=alex ip=192.0.2.10 status=failed"></textarea><div class="form-bottom"><span class="muted small">Tip: include status=failed or status=success and ip=...</span><button class="primary-button" id="analyzeLogs" type="button">Analyze events →</button></div><div id="logResults" class="log-results hidden"></div></article>
+        <footer class="footer"><span>CYBERPULSE X <span class="footer-dot">●</span> LOG ANALYZER</span><span>Demo analyzer · not a SIEM replacement</span></footer>
+      </section>
+
+      <section class="view" id="missionsView">
+        <div class="page-heading"><div class="eyebrow"><span class="eyebrow-line"></span> TRAINING SIMULATION / BETA</div><h1>Cyber <span>Missions</span></h1><p>Short defensive challenges to practice recognizing suspicious signals. No real systems are targeted.</p></div>
+        <article class="panel mission-card"><div class="mission-top"><span class="mission-number">MISSION 001 / AWARENESS</span><span class="difficulty">BEGINNER</span></div><div class="mission-emblem">⌁</div><h2>Spot the phishing signal</h2><p>You receive an email claiming your account will be closed in 10 minutes. The link points to <code>http://account-check.example.invalid/verify</code>. What is the safest next step?</p><div class="mission-options" id="missionOptions"><button data-answer="wrong">Click the link quickly before time runs out.</button><button data-answer="correct">Open the official website manually or contact support through a known channel.</button><button data-answer="wrong">Reply with your password to confirm ownership.</button></div><div id="missionFeedback" class="mission-feedback" aria-live="polite"></div><button class="secondary-button" id="resetMission">Reset mission ↻</button></article>
+        <footer class="footer"><span>CYBERPULSE X <span class="footer-dot">●</span> TRAINING MODE</span><span>Learn to defend, not to attack.</span></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
