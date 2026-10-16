@@ -1,4 +1,4 @@
-name: Deploy CyberPulse-X to GitHub Pages
+name: Deploy portfolio and CyberPulse-X to GitHub Pages
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
     paths:
       - 'cyberpulse-x/**'
       - '.github/workflows/deploy-cyberpulse-pages.yml'
+      - 'index.html'
+      - 'assets/**'
   workflow_dispatch:
 
 permissions:
@@ -28,10 +30,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload website files
+      - name: Upload repository website files (preserve portfolio and project folder)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './cyberpulse-x'
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
